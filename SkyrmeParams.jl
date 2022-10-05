@@ -80,6 +80,17 @@ module NuclParameters
             x3=0.00
             σ=1
             W0=120.0
+		elseif ParamType=="VB2"
+			t0=-1169.9
+            t1=585.6
+            t2=-27.1
+            t3=9331.1
+            x0=0.34
+            x1=0.00
+            x2=0.00
+            x3=0.00
+            σ=1
+            W0=105.0
         elseif ParamType=="SKS3"
             t0=-2014.7
             t1=361.0
@@ -110,7 +121,7 @@ module NuclParameters
         aN[9]=-1/16*(p.t1*p.x1+p.t2*p.x2)
         aN[10]=1/16*(p.t1-p.t2)
 
-        if ParamType=="VB1"
+        if ParamType=="VB1" || ParamType=="VB2"
             aN[3]=p.t3/8
             aN[4]=-aN[3]
         end

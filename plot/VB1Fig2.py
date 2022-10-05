@@ -15,7 +15,7 @@ plt.rcParams['text.usetex'] = False
 plt.rcParams['lines.linewidth'] = 2
 plt.rcParams['figure.subplot.bottom'] = 0.15
 
-d1=pd.read_csv('../data/Z82N126L0_VB1HPL2/density.csv',comment='#')
+d1=pd.read_csv('../data/Z82N126L0_VB1NaN/density.csv',comment='#')
 
 
 fig=plt.figure()

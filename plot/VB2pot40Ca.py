@@ -15,7 +15,7 @@ plt.rcParams['text.usetex'] = False
 plt.rcParams['lines.linewidth'] = 2
 plt.rcParams['figure.subplot.bottom'] = 0.15
 
-d1_pot=pd.read_csv('../data/Z82N126L0_VB1HPL2/potential.csv',comment='#')
+d1_pot=pd.read_csv('../data/Z20N20L0_VB2NaN/potential.csv',comment='#')
 
 #print(d1_pot.head)
 
@@ -44,8 +44,8 @@ ax.tick_params(axis='y', which='both',left='true',right='true', direction='in',l
 #ax.set_yticks([-50,0,50,100,200,300])
 #ax.tick_params(labelsize=12)
 
-plt.savefig("VB1pot.pdf",dpi=300)
-plt.savefig("VB1pot.png",dpi=300)
+plt.savefig("VB2pot40Ca.pdf",dpi=300)
+plt.savefig("VB2pot40Ca.png",dpi=300)
 plt.show()
 
 #指定可能なファイル形式は emf, eps, jpeg, jpg, pdf, png, ps, raw, rgba, svg,
