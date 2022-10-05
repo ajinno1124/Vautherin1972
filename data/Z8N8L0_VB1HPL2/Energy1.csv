@@ -1,8 +1,0 @@
-# Nuclear Parameter=VB1
-# Z=8, N=8, Λ=0
-# Number of mesh=600
-# rmax=30
-# Matching point of shooting = 7.45
-
-Etot/A(MeV), Etot1(MeV), 	EN(MeV),	 Ec_dir(MeV)
--8.219364515868214,-131.50983225389143,-132.29846104213578,17.16537356101442,16.376744772770056

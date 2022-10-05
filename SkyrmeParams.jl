@@ -241,6 +241,15 @@ module LambdaParameters
             u3p = 4.912041998187181
             y0 = 0.0
             y3 = 0.0
+        elseif ParamType=="NaN"
+            γ = 0.0
+            u0 = 0.0
+            u1 = 0.0
+            u2 = 0.0
+            u3 = 0.0
+            u3p = 0.0
+            y0 = 0.0
+            y3 = 0.0
         end
 
         return LambdaParams(γ,u0,u1,u2,u3,u3p,y0,y3)

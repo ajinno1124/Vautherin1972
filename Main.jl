@@ -19,7 +19,6 @@ using .MyLib
     Nmatch=150
     rmax=30
     lmax=7
-    isCM=2 #c.m.の扱い方。1: posteori, 2: VB72
 end
 
 mutable struct QuantumNumber
@@ -470,7 +469,7 @@ function Calc_Vcoul(ρp::Vector{Float64},rmesh,Z)
     Vcoul+=MyLib.SolvePoissonEq(ρp,rmesh,Z)
     @. Vcoul[2:Nmesh]=Vcoul[2:Nmesh]/rmesh[2:Nmesh]
     Vcoul[1]=InterPolEvenFunc0(Vcoul[2],Vcoul[3],Vcoul[4])
-    #@. Vcoul[:]+=-(3*ρp[:]/π)^(1/3) VB has no exchange term
+    #@. Vcoul[:]+=-(3*ρp[:]/π)^(1/3) #VB has no exchange term
     #Vcoul*=e2MeVfm/2 #Chabanat
     Vcoul*=e2MeVfm #Reainhard
 
@@ -664,7 +663,7 @@ function OutPutFiles(AN::AtomNum;NParamType="SLy4",LParamType="HPL1", α=0.5)
     WriteWaveFunc(AN,Ansocc,AnsStates,NParamType,LParamType)
     WriteDensityPot(AN,Ansocc,AnsStates,NParamType,LParamType)
 	if Λ==1
-    	WriteTotalEnergy(AN,Ansocc,AnsStates,NParamType,LParamType)
+        WriteTotalEnergy(AN,Ansocc,AnsStates,NParamType,LParamType)
 	elseif Λ==0
 		WriteTotalEnergy(AN,Ansocc,AnsStates,NParamType)
 	end
